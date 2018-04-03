@@ -13,7 +13,7 @@ class CoinForm extends React.Component {
   }
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const { dispatch } = this.props;
     const { coin } = this.state;
     dispatch(addCoin(coin))
@@ -27,15 +27,12 @@ class CoinForm extends React.Component {
           label="Watch Coin"
           value={this.state.coin}
           onChange={this.handleChange}
-          name="coin"
           required
-          />
-          <Form.Button>Add Coin</Form.Button>
+        />
+        <Form.Button>Add Coin</Form.Button>
       </Form>
     )
   }
-
 }
-
 
 export default connect()(CoinForm);
